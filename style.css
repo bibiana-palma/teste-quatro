@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    text-align: justify;
+}
+
+
+header {
+    background: #ffffff;
+    color: #000000;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+aside {
+    background: #ffc062;
+    padding: 2rem;
+    margin: 1rem 0;
+    list-style: none;
+    text-align: center;
+}
+
+aside h2 {
+    margin-bottom: 0,5rem;
+    text-align: center;
+}
+
+aside li{
+    list-style: none;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+article{
+    text-align: center;
+}
+
+article li{
+    list-style: none;
+}
+
+main img {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.fundo{
+    background-color: #aed4ff;
+    padding: 2rem;
+}
+
+footer{
+    display: flex;
+    background: #ffffff;
+    color: #000000;
+    width: 100%;
+    justify-content: center;    
+    margin: 2rem;
+}
+footer p{
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 150px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 5px;
+    flex: 1 1 300px; 
+}
+
+.gallery-item img, .gallery-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-item:hover img, .gallery-item:hover video {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #aed4ff;
+    }
+
+    #menu-toggle:checked + ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    aside {
+        margin: 1rem ;
+
+    }
+
+    footer {
+        position: static;
+    }
+}
